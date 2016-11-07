@@ -1,0 +1,450 @@
+
+* {
+    /*color:				rgb(68,68,68);*/
+    font-family: monospace;
+    font-size:14px;
+}
+
+
+body {
+	margin: 0px;
+	background-color: #FFFFFF;
+	padding: 0px 0px 0px 0px;
+}
+
+.atamishky {
+    /*float: left;*/
+ 	margin:0px auto;
+ 	margin-left: 3%;
+	width: 848px;
+	color:				rgb(68,68,68);
+    font-family: 			arial;
+	font-size: 12px;
+}
+
+.atamishky .content .content_pager{
+	position: relative;
+	width: 796px;
+	background-color: #FFFFFF;
+	padding-left: 9px; /*26px;onemli*/
+	padding-top: 20px;
+	padding-right: 26px;
+
+}
+
+/* overriding settings of the included header file: special fix for my homepage */
+.atamishky #banner p.emptyy {
+	bottom: -16px;
+}
+
+.atamishky #banner img {
+	position: relative;
+	bottom: 14px;
+}
+/* end of override */
+
+.atamishky .loading {
+	position: relative;
+	/*width: 796px;*/
+	background-image:url(img/indicator.gif);
+	background-repeat: no-repeat;
+	background-color: #FFFFFF;
+	padding-left: 26px;
+	padding-right: 26px;
+
+}
+.atamishky .whitebox {
+	position: relative;
+	background-color: #FFFFFF;
+	border-bottom: 5px solid #d9e2d9;
+	margin-bottom: 11px;
+	padding-bottom: 7px;
+}
+.atamishky .entry, .entry1, .entry1_booked {
+	position: relative;
+	width: 770px;
+	min-height: 38px;
+	background-color: #FFFFFF; /*#E6E5E5;*/
+	margin-top: 5px;
+	border: 1px solid #CBCACA;
+	padding-top: 7px;
+	padding-right: 7px;
+	padding-bottom: 7px;
+	padding-left: 17px;
+	background-position:left;
+	background-repeat:repeat-y;
+}
+.atamishky .entry1 {
+	background-image:url(img/b_oncelikli2.gif);
+}
+
+.atamishky .entry1_booked {
+	background-image:url(img/b_oncelikli2_ROJO.gif);
+}
+
+.atamishky .entry1 span, .entry1_booked span {
+	text-decoration: none;
+	border-bottom:1px dotted;
+	cursor: pointer;
+}
+
+.atamishky .entry1 a,.entry1_booked a {
+	text-decoration: none;
+	/*border-bottom:1px solid #AAAAAA;*/
+	color: #000000;
+	cursor: pointer;
+}
+
+.atamishky .entry1 a:hover,.entry1_booked a:hover {
+	text-decoration: none;
+	border-bottom:1px solid #000000;
+	color: #000000;
+	cursor: pointer;
+}
+
+/* entry layout */
+/* I inlined this one to enhance embeddability of atamishky. 
+.atamishky .sprites {
+	 background-image:url("img/sprites.gif");
+	 margin:2px 0 0 0;
+}
+*/
+.atamishky .bibtexSprite {
+	   width:20px;
+	   height:20px;
+	   background-position:0px -25px;
+	   top:4px;
+}
+.atamishky .permalinkSprite {
+	   width:20px;
+	   height:20px;
+	   background-position:-125px -25px;
+	   top:4px;
+}
+.atamishky .apaSprite {
+	   width:20px;
+	   height:20px;
+	   background-position:-125px -50px;
+	   top:4px;
+}
+.atamishky .isoSprite {
+	   width:20px;
+	   height:20px;
+	   background-position:-100px -50px;
+	   top:4px;
+}
+.atamishky .pdfSprite {
+	   width:20px;
+	   height:20px;
+	   background-position:-25px -25px;
+	   top:4px;
+}
+.atamishky .prestadoSprite {
+	   width:20px;
+	   height:20px;
+	   background-position:-175px -50px;
+	   top:4px;
+}
+.atamishky .prestamoSprite {
+	   width:20px;
+	   height:20px;
+	   background-position:-175px -50px;
+	   top:4px;
+}
+.atamishky .htmlSprite {
+	    width:20px;
+	    height:20px;
+	    background-position:-25px 0;
+	    top:4px;
+}
+.atamishky .slidesSprite {
+	    width:20px;
+	    height:20px;
+	    background-position:0px -50px;
+	    top:4px;
+}
+.atamishky .posterSprite {
+	    width:20px;
+	    height:20px;
+	    background-position:-100px -25px;
+	    top:4px;
+}
+.atamishky .moreButton {
+	    width:20px;
+	    height:20px;
+	    border: 0px;
+}
+.atamishky .entrybody {
+	position: relative; 
+	left: 48px; 
+	top:3px;
+	width: 720px;
+	text-align: justify;
+	visibility: visible; /*hidden;*/
+}
+
+/*Agregado para que quede menos chiotto el margen de la sección ayuda*/
+.atamishky .entrybody p {
+    width: 90%;
+}
+
+
+.atamishky .entrybody table {                                                                          
+        border: none;                                                                              
+}                                                                                                  
+.atamishky .entrybody td {
+    vertical-align: top;
+    border: none;
+    text-align: justify;
+}
+.atamishky .entrybody ul {
+	padding: 0px;
+	margin-left: 15px;
+}
+.atamishky .bibbody {
+	position: relative; 
+	/*margin-top: 10px;*/
+	background: #EEEEEE;
+	left: 48px; 
+	top:3px;
+	width: 720px;
+	text-align: justify;
+    /*font-family: monospace;*/
+    font-size: 9px;
+	visibility: hidden;
+}
+
+.atamishky .poster{
+	position: relative; 
+	left: 48px; 
+	/*bottom: 14px;*/
+	text-align: right;
+	width: 720px;
+}
+.atamishky .title {
+	position: relative; 
+	top: 0px; 
+	left: 48px; 
+	width: 700px;
+	font-weight:bold;
+	font-family:Georgia, Arial, Helvetica, sans-serif;
+	font-size:14px;
+	cursor: pointer;
+}
+.atamishky a.title {
+	left: 0px; 
+	color: #000;
+	text-decoration:none;
+	cursor: pointer;
+}
+.atamishky .topright{
+	position: absolute; top: 7px; right: 7px; text-align:right; width: 90px; z-index: 11;
+}
+.atamishky .topleft{
+	position: absolute; top: 7px; left: 7px; 
+}
+.atamishky .bottomright{
+	position: relative; 
+	text-align:right; 
+	z-index: 11; 
+	padding-left: 10px;
+}
+.atamishky .bottomright a:hover {
+		     text-decoration: none;
+		     border-bottom: 0px;
+}
+.atamishky .bottomleft {
+	position: relative; 
+	top: 3px;
+	left: 48px; 
+	width: 720px;
+	color:#666666; 
+	z-index:10;
+}
+.atamishky .entryimages {
+	float:right;
+	position: relative;
+	padding-left: 10px;
+	cursor: pointer;
+	padding-bottom: 20px;
+}
+
+.atamishky .article, .musica, .video, .book, .mastersthesis, .mastersproject, .phdthesis, .misc
+{
+	position:absolute;
+	height: 36px;
+	width: 36px;
+	background-repeat: no-repeat;
+}
+
+/*.atamishky a.article { */
+/*background-image:url("img/J.png"); */
+/*}*/
+.atamishky a.book { 
+	background-image:url("img/type-icons/book.png"); 
+}
+/*.atamishky a.mastersthesis { */
+/*background-image:url("img/MS.png"); */
+/*}*/
+/*.atamishky a.mastersproject { */
+/*background-image:url("img/MAS.png"); */
+/*}*/
+/*.atamishky a.phdthesis { */
+/*background-image:url("img/PhD.png"); */
+/*}*/
+.atamishky a.misc { 
+	background-image:url("img/type-icons/misc.png"); 
+}
+/*Son malditos divs (como siempre termina siendo) y levanta la img de la izaquierda de la*/
+/*entrada, acorde al class={entrytype}, asi que cuidado.*/
+.atamishky a.musica { 
+	background-image:url("img/type-icons/musica.png"); 
+}
+.atamishky a.video { 
+	background-image:url("img/type-icons/video.png"); 
+}
+
+/* Start Tag Cloud CSS */
+.atamishky #keywordsCloud {padding:1px; line-height:30px;text-align:justify;}
+.atamishky .bigLinks a {text-decoration:none;padding:0px;color:#000000;}
+.atamishky .bigLinks a:hover {text-decoration:underline;}
+.atamishky .authorListLinks a {text-decoration:none;padding:0px;color:#000000;}
+
+.atamishky .total {
+	text-decoration:none;
+	padding:0px;
+	color:#000000;
+	font-size:10px;
+    /*position: absolute; */
+	text-align:right;
+	top: 30px; right: 30px; 
+}
+.atamishky span.tag8 {
+	text-decoration:none;
+	padding:0px;
+	color:#000000;
+	font-size:20px;
+	font-weight:300;
+}
+
+.atamishky a.tag1{
+font-size:12px;
+}
+.atamishky a.tag2, a.tag3 {
+font-size:13px;
+font-weight:200;
+}
+
+.atamishky a.tag4 ,a.tag5, a.tag6 {
+font-size:16px;
+font-weight:300;
+}
+
+.atamishky a.tag7, .tag8, a.tag9 {
+font-size:20px;
+font-weight:300;
+}
+
+.atamishky a.tag10, a.tag11, a.tag12 {
+font-size:24px;
+font-weight:300;
+}
+
+.atamishky a.tag13, a.tag14, a.tag15 {
+font-size:28px;
+font-weight:400;
+}
+
+.atamishky a.tag16, a.tag17, a.tag18 {
+font-size:30px;
+font-weight:400;
+}
+
+.atamishky a.tag19, a.tag20, a.tag21 {
+font-size:32px;
+font-weight:500;
+}
+
+.atamishky a.tag22, a.tag23, a.tag24 {
+font-size:34px;
+font-weight:500;
+}
+
+.atamishky a.tag25, a.tag26, a.tag27 {
+font-size:36px;
+font-weight:900;
+}
+
+.atamishky a.tag28, a.tag29, a.tag30 {
+font-size:38px;
+font-weight:900;
+}
+/* End Tag Cloud CSS */
+
+/* horizontal menu matrix */
+.atamishky #filters {
+    border: none;
+    margin: 0;
+}
+
+.atamishky #filters tr td {
+    display: block;
+    float: left;
+    clear: left;
+}
+.atamishky #filters ul li {
+    float: left;
+    margin: 0px 10px 10px 10px;
+    list-style-position:outside;
+    list-style-type: disc;
+}
+
+.atamishky ul li {
+    font-size: 12px;
+    line-height: 18px;
+    list-style-position:outside;
+    list-style-type: disc;
+}
+
+div.sociable { margin: 0px 0; }
+
+.sociable a {
+    text-decoration: none;
+    border-bottom: 0px !important;
+}
+.sociable ul {
+    display: inline;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+.sociable ul li {
+    background: none;
+    display: inline !important;
+    list-style-type: none;
+    margin: 0;
+    padding: 1px;
+}
+.sociable ul li:before { content: ""; }
+.sociable img {
+    float: none;
+    width: 16px;
+    height: 16px;
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.sociable-hovers {
+    opacity: .4;
+    -moz-opacity: .4;
+    filter: alpha(opacity=40);
+}
+.sociable-hovers:hover {
+    opacity: 1;
+    -moz-opacity: 1;
+    filter: alpha(opacity=100);
+}
+/*Pager*/
+ul.simplePagerNav li{
+    display: block;    
+}
