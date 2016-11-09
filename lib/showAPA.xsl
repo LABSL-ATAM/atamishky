@@ -31,7 +31,7 @@
 <!--Autores-->
 <xsl:choose>
     <xsl:when test="count(authors/author)=1">
-            <xsl:value-of select="authors/author[1]"/>.&#160;
+            <xsl:value-of select="authors/author[1]"/>,&#160;
     </xsl:when>
     <xsl:when test="count(author)=2">
             <xsl:value-of select="authors/author[1]"/>&#160;y&#160;
@@ -47,19 +47,22 @@
 <!--</xsl:when>-->
 					
 <!--ccccccccccccccccccccccccccccccccccccccccccccccccccc-->
-<!--<xsl:when test="name(.)='title'">-->
-<!--Titulo-->
-"<xsl:value-of select="title"/>".&#160;
+					
+                    
+<!--<xsl:when test="name(.)='year'">-->
+<!--Agno-->
+<xsl:if test="year">
+    (<xsl:value-of select="year"/>),&#160;
+</xsl:if>
+<xsl:if test="not(year)">
+    (Sin fecha),&#160;
+</xsl:if>
 <!--</xsl:when>-->
 <!--ccccccccccccccccccccccccccccccccccccccccccccccccccc-->
-<!--<xsl:when test="name(.)='publisher'">-->
-<!--Editorial-->
-<!--"entrytype"/> not equal 'video'-->
-<xsl:if test="entrytype != 'video'">
-<xsl:if test="publisher">
-    <xsl:value-of select="publisher"/>.&#160;
-</xsl:if>
-</xsl:if>
+<!--<xsl:when test="name(.)='title'">-->
+<!--Titulo-->
+<em><xsl:value-of select="title"/></em>,&#160;
+<!--</xsl:when>-->
 <!--</xsl:when>-->
 <!--ccccccccccccccccccccccccccccccccccccccccccccccccccc-->
                     
@@ -87,18 +90,16 @@
 					
 <!--</xsl:when>-->
 <!--ccccccccccccccccccccccccccccccccccccccccccccccccccc-->
-					
-                    
-<!--<xsl:when test="name(.)='year'">-->
-<!--Agno-->
-<xsl:if test="year">
-    <xsl:value-of select="year"/>.&#160;
-</xsl:if>
-<xsl:if test="not(year)">
-    Sin fecha.&#160;
-</xsl:if>
-<!--</xsl:when>-->
+
 <!--ccccccccccccccccccccccccccccccccccccccccccccccccccc-->
+<!--<xsl:when test="name(.)='publisher'">-->
+<!--Editorial-->
+<!--"entrytype"/> not equal 'video'-->
+<xsl:if test="entrytype != 'video'">
+<xsl:if test="publisher">
+    <xsl:value-of select="publisher"/>&#160;
+</xsl:if>
+</xsl:if>
 					
                     
 <!--<xsl:when test="name(.)='pages'">-->
