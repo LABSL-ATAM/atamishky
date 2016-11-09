@@ -83,14 +83,6 @@ los tags relacionados a alguna entrada en particular, alcanza con consultar la
 informacion detallada de la entrada, a través del enlace <strong>mas
 info</strong> de la derecha.</p>
 
-<h1>Catálogo</h1>
-
-Para consultar al catálogo offline, ofrecemos versiones del mismo en los siguientes formatos:
-
-<ul>
-    <li><a href="/lib/catalogo.txt">Texto Plano (txt)</a></li>
-    <li><a href="http://multimedia.una.edu.ar/contenidos/562-mediateca">PDF</a></li>
-</ul>
 
 </div>
 </div>

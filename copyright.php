@@ -2,7 +2,7 @@
 <div class="entry1">
 <div class="title">Nota sobre el Copyright</div>
 <div class="entrybody">
-<p>Si sos restrictivo con el copyright, sos un vigilante.... Nah, reemplazar por lo que corresponda.</p>
+<p>Distribuir bajo alguna licencia libre, copyleft o WTFPL.</p>
 </div>
 </div>
 </div>

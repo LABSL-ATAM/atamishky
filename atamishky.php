@@ -140,8 +140,9 @@ echo "</div>";
 <span>
 <a href="index.php?action=ayuda">Ayuda</a> &#149;
 <a href="index.php?action=reglamento">Reglamento</a> &#149;
+<a href="javascript:void(0)" title="Ver todos los préstamos" onclick="getprs_items()">Préstamos</a> &#149;
 <a href="index.php?action=copyright">Copyright</a> &#149;
-2015.
+LABSL-ATAM 2015.
 </span><br/><br/><br/>&nbsp;
 </div> 
 <?php 

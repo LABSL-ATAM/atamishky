@@ -2,7 +2,6 @@
 /*
  ***************************************************************
  Atencion: 
-    este archivo es super secreto... ^_^
     Poner aca la contraseña maestra (o sea la única que tenemos), y 
     un salt para hashear la gran hashead de los hashiz.
  Nota: 

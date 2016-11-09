@@ -18,7 +18,6 @@ SYNOPSIS
 Archivo en la entrada
     El archivo csv tiene que respetar en su encabezado, el siguiente orden:
 
-<<<<<<< HEAD
     * tipo 
     * titulo 
     * autores 
@@ -29,10 +28,6 @@ Archivo en la entrada
     * link 
     * soporte 
     * descripcion
-=======
-    * tipo * titulo * autores * editorial * año * ciudad * bibliografia *
-    link * soporte * descripcion * idioma * paginas-capitulos.
->>>>>>> atam
 
     Los valores en todo el csv se separan con la pipa |.
 
@@ -65,7 +60,7 @@ Archivo en la entrada
     Para todo lo demas existe pandoc.
 
 Autor y Licencia.
-    Programado por Marxbro aka Gstv, ditribuir solo bajo la licencia WTFPL:
+    Programado por Marxbro aka Gstv, distribuir solo bajo la licencia WTFPL:
     *Do What the Fuck You Want To Public License*.
 
     Zaijian.
