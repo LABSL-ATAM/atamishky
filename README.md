@@ -8,3 +8,10 @@ Falta implementar en este repo (desde branch atam-dev):
 * Sistema de enlaces directos.
 * Número de catálogo.
 
+__Todo lo anterior está programado y andando, falta portarlo...__
+
+## Licencia
+
+Está todo -por ahora- bajo la WTFPL.
+
+Parte del trabajo está basado en [Bebop](http://people.alari.ch/derino/Software/Bebop/), que está distribuído con la lic. BSD adjuntada.
