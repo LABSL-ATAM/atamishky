@@ -23,4 +23,4 @@ Parte del trabajo está basado en [Bebop](http://people.alari.ch/derino/Software
 
 _El backend BibTex/Java está completamente reescrito..._
 
-_Desarrollado en el 2015 por el [Laboratorio de Software Libre del ATAM-UNA](https://labsl.multimediales.com.ar)._
+_Desarrollado en el 2015 por G.Yz para el [Laboratorio de Software Libre del ATAM-UNA](https://labsl.multimediales.com.ar)._

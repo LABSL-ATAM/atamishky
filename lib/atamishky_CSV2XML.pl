@@ -41,26 +41,24 @@ my @entities_encoded       = qw/&amp; &quot; &apos; &lt; &gt;/;
 my $catalogo_txt = ''; # berreta.
 
 # esto va a ser usado despues para sacar el lenguaje.
-#my $guesser = Text::Language::Guess->new(languages =>['es','en','it','de']);
 my $guesser = Text::Language::Guess->new(languages =>['es','en', 'fr']);
 
 
 foreach my $ln_csv_raw (@csv_lns){
-#saltearse la linea de encabezados.
     next if ($ln_csv_raw =~ m/^tipo\|/i);
     chomp($ln_csv_raw);
     my $ln_csv         = encode_some_shitty_entities($ln_csv_raw);
 
     my @campos = split /\|/, $ln_csv;
 
-#Estos campos son directos.
+# Estos campos son directos.
     my $tipo            = $campos[0];
     my $titulo          = sacar_punto_del_final($campos[1]);
     my $editorial       = $campos[3] || "none";
     my $agno            = $campos[4] || "none";
     my $city            = do_city($campos[5]);
 
-#estos necesitan atencion
+# estos necesitan atención..
     my $bibliografia    = $campos[6] || "none";
     my $link            = $campos[7] || "none";
     my $soporte         = $campos[8] || "none";
@@ -68,8 +66,8 @@ foreach my $ln_csv_raw (@csv_lns){
     my $lenguaje        = $campos[10] || "pipo";
     my $pag_capi        = $campos[11] || "none";
 
-#salida a un mugroso txt.
-#author . titulo . editorial . ciudad , año
+# salida a txt.
+# author . titulo . editorial . ciudad , año
     my $autores_txt = $campos[2];
     my $catalogo_txt_add = join('. ',$autores_txt,$titulo,$editorial,$campos[5]);
     $catalogo_txt_add .= ', ' . $agno . '.';
@@ -110,10 +108,10 @@ foreach my $ln_csv_raw (@csv_lns){
 #son keywords todas las palabras del titulo de mas de 4 letras.
     my $keywords = make_keywords($titulo);
 
-#Los autores son un quilombo,
+#Los autores son especiales..,
     my $autores         = make_authors($campos[2]);
 
-# Index unico e irrepetible para el nombre de la entrada... chiotto.
+# Index unico e irrepetible para el nombre de la entrada...
     my $nombre = $tipo . '2015-' . $index ;
 
 #Esta cabeceada evita quilombos 

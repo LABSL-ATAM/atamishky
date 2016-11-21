@@ -71,14 +71,11 @@ function sano ($input){
     } 
 }
 //******************************************************************
-//Funciones de seguridad... o algo asi.
-//******************************************************************
-
 //Esta funcion valida el xsl desde el hash md5 del archivo.
 //Se asegura que ese valor sea igual al valor dado por php, al vuelo.
+//******************************************************************
 function validar_xsl($nombre) {
     $MD5s = do_hash_seguridad_vendehumo();
-    //$nombre_archivo = "lib/" . $nombre;
     $nombre_archivo = $nombre;
     $md5_txt = $MD5s[$nombre];
     $md5_php = md5_file($nombre_archivo);
@@ -96,7 +93,6 @@ function do_hash_seguridad_vendehumo() {
             $line           = fgets($handle_md5txt);
             $line           = str_replace("\n", '', $line);
             $matches_rgx    = explode(' ',$line);
-            //esto evita algunos errores
             if (!$matches_rgx[0] || !$matches_rgx[1]){
                 continue;    
             }

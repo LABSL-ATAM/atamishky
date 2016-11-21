@@ -283,19 +283,11 @@ function stateChangedKeywords() {
 
 function doSearch() {
     var query = document.forms['searchform'].q.value;
-<<<<<<< HEAD
-    if (document.getElementById('d').selected ) {
-        showCategory('searchdescripcion', query.toLowerCase());
-    } else if (document.getElementById('a').selected) {
-        //showCategory('searchautor', query.toLowerCase());
-        // vamos a probar algo nuevo.
-=======
     if ( document.getElementById('x').selected ){
         showCategory('searchTODO',query.toLowerCase());    
     } else if ( document.getElementById('d').selected ) {
         showCategory('searchdescripcion', query.toLowerCase());
     } else if ( document.getElementById('a').selected ) {
->>>>>>> atam
         search_autores(query.toLowerCase());
     } else if ( document.getElementById('t').selected ){    // Titulo
         showCategory('searchtitle', query.toLowerCase());
@@ -316,11 +308,7 @@ function doSearch() {
     Si la busqueda es por autor
         1 - Traer toda a lista de autores,
         2 - Filtar los nombres de autores que no coinciden.
-<<<<<<< HEAD
-        3 - Escribir el HTML resultante (como si nada hubiera pasado).
-=======
         3 - Escribir el HTML resultante.
->>>>>>> atam
 */
 function search_autores(buscado){
     toggleAuthorList='s';
@@ -342,11 +330,7 @@ function stateChangedKeywords_filter(buscado){
         document.getElementById("CfPTable").innerHTML="";
     } else if (xmlHttp.readyState==4 || xmlHttp.readyState=="complete") { 
         var resultado_query = '<html>' + xmlHttp.responseText + '</html>';
-<<<<<<< HEAD
-        var parser = new DOMParser(); // necesito un parser nuevo, porque no hay DOM.
-=======
         var parser = new DOMParser();
->>>>>>> atam
         var lista_resultado_query = parser.parseFromString(resultado_query,"text/xml");
         var lis = lista_resultado_query.querySelectorAll('ul li');
         var re = new RegExp(buscado, "i");
@@ -394,8 +378,22 @@ function getprs_items(){
     url=url+"?action=getprs";
     url=url+"&sid="+Math.random();
     xmlHttp.onreadystatechange=function(){ stateChangedKeywords_prs(); };
-    xmlHttp.open("GET",url,true);
+    xmlHttp.open("GET",url,false);
     xmlHttp.send(null);
+}
+/*  Esta función sirve para reorganizar el contenido del div central.   */
+/*  de la página de préstamos.                                          */
+function sacar_div_molesto(dd){
+    var prest = new RegExp("Presto");
+    var wrapper = document.createElement('div');
+    wrapper.innerHTML = dd;
+    var div_cntts = wrapper.querySelectorAll("div.content_pager");
+    var ppner     = '<div class="content_pager" id="cntt">';
+    for (var i = 0; i <  div_cntts.length; i++){
+        ppner += div_cntts[i].innerHTML;
+    }
+    ppner += '</div>';
+    return ppner;
 }
 function stateChangedKeywords_prs(){
     if (xmlHttp.readyState<4) { 
@@ -430,14 +428,17 @@ function stateChangedKeywords_prs(){
         if (cuenta == 0){
             vwantedta += "No hubo resultados";
         }
-        document.getElementById("CfPTable").innerHTML= vwantedta;
+        var grr = sacar_div_molesto(vwantedta);
+        document.getElementById("CfPTable").innerHTML= grr;
         document.getElementById("keywordsCloud").innerHTML= ""; 
     } 
 }
 function prestar(pub) {
     var nombre_div = 'bib' + pub;
-    var inputin = '<div id="popup"><div>Contraseña:</div><input id="pass" type="password"/><button onclick="done(' +
-        '\'' + pub + '\'' + ')">OK</button></div>';
+    var inputin = '<div id="popup"><div>Contraseña:</div><input id="pass" type="password" ' + 
+        'onkeydown="if (event.keyCode == 13) document.getElementById(' + 
+        '\'boton\'' + ').click()"' + '/><button id="boton" onclick="done(' +
+        '\'' + pub  + '\'' + ')">OK</button></div>';
     document.getElementById(nombre_div).innerHTML = inputin;
     document.getElementById(nombre_div).style.visibility="visible";
 }
