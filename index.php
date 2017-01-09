@@ -1,6 +1,13 @@
 <?php
 include_once("functions.inc.php");
 include_once("user.conf.inc.php");
+include "lib/SecureHeaders.php";
+
+$headers = new SecureHeaders();
+$headers->hsts();
+$headers->csp('default', 'self');
+//$headers->csp('script', 'https://my.cdn.org');
+$headers->done();
 
 $action=$_GET["action"];
 $by=$_GET["by"];
