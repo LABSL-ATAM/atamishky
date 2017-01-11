@@ -5,7 +5,7 @@ include "lib/SecureHeaders.php";
 
 $headers = new SecureHeaders();
 $headers->hsts();
-$headers->csp('default', 'self');
+//$headers->csp('default', 'self');
 //$headers->csp('script', 'https://my.cdn.org');
 $headers->done();
 
